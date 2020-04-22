@@ -1,0 +1,49 @@
+<div class="container" style="text-align:center">
+  <div class="row">
+    <div class="col-xs-12">
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let postItem of pgCollection">
+          <div class="row">
+            <div class="col text-center">
+             <img
+              [src]="postItem.imageUrl"
+              alt="{{ postItem.imageUrl }}"
+              class="img-responsive"
+              style="max-height: 400px;">
+           </div>
+          </div>
+          <div class="mx-auto" style="width: 200px; height: 100px;">
+             CAPTION
+          </div>
+          <div class="container-fluid" 
+             style="border:1px solid #cecece;">  
+            <div class="row">                                           
+               <div class="col-xs-12"> 
+                  <div class="pull-left">
+                    <h6 class="list-group-item-heading">{{ postItem.userName }}</h6>
+                  </div>  
+               </div>          
+            </div>      
+            <div class="container-fluid d-flex" style="border:3px solid #cecece;">                                                
+              <div class="row">                                           
+                <div class="h-auto d-inline-block" style="width: 600px; background-color: rgba(0,0,255,.1)"> 
+                  <p class="list-group-item-text">{{ postItem.commentText }} </p>  
+                  <span class="pull-right">
+                    <button style="font-size:18px">{{ postItem.likeCount }}   <i class="fa fa-thumbs-up"></i></button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mx-auto" style="width: 200px; height: 100px;">
+            
+         </div>
+         </li>
+     </ul>
+    </div>
+  </div>
+</div>
+
+
